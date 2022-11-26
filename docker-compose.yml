@@ -15,6 +15,7 @@ services:
       context: ./django/
     volumes:
       - tmp-data:/app/tmp
+      - ./django/mysite:/app/mysite
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_HOST=db_postgres

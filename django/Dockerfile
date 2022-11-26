@@ -7,7 +7,6 @@ COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # init django
-RUN django-admin startproject mysite .
 COPY ./uwsgi.ini .
 COPY ./settings.py mysite/
 
@@ -28,3 +27,4 @@ COPY --from=builder /usr/local/bin/uwsgi /usr/local/bin/uwsgi
 COPY --from=builder /app /app
 
 CMD uwsgi --ini uwsgi.ini
+

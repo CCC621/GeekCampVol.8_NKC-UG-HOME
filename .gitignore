@@ -1,2 +1,9 @@
-#ローカル起動用のpostogresのデータを格納するディレクトリ
+# Local PostgreSQL data
 volumes/data/db/
+
+# Django
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+.env/

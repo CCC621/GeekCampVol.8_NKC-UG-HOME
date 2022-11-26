@@ -27,4 +27,3 @@ COPY --from=builder /usr/local/bin/uwsgi /usr/local/bin/uwsgi
 COPY --from=builder /app /app
 
 CMD uwsgi --ini uwsgi.ini
-

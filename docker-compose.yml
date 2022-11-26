@@ -16,12 +16,14 @@ services:
     volumes:
       - tmp-data:/app/tmp
       - ./django/mysite:/app/mysite
+      - ./django/homepageapp:/app/homepageapp
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_HOST=db_postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_PORT=5432
+      - SECRET_KEY=devsecretkey
     depends_on:
       - db
   nginx:

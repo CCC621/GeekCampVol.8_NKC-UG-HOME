@@ -1,0 +1,2 @@
+#ローカル起動用のpostogresのデータを格納するディレクトリ
+volumes/data/db/

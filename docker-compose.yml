@@ -17,6 +17,9 @@ services:
       - tmp-data:/app/tmp
       - ./django/mysite:/app/mysite
       - ./django/homepageapp:/app/homepageapp
+      - ./django/static:/app/static
+      - ./django/manage.py:/app/manage.py
+      - ./django/settings.py:/app/settings.py
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_HOST=db_postgres
@@ -24,6 +27,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_PORT=5432
       - SECRET_KEY=devsecretkey
+      - DEBUG=True
     depends_on:
       - db
   nginx:
